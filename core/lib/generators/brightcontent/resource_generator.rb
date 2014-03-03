@@ -5,6 +5,11 @@ module Brightcontent
 
       desc "Creates Brightcontent controller, route and empty views dir"
 
+      include BaseControllerExt::Fields::ClassMethods
+      def resource_class
+        @name.constantize
+      end
+
       def generate_controller
         template "brightcontent_controller.rb", "app/controllers/brightcontent/#{@name.pluralize.underscore}_controller.rb"
       end
