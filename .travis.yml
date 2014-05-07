@@ -1,15 +1,7 @@
 script:
   - bundle exec rake db:migrate spec RAILS_ENV=test
-env:
-  - GEM=core
-  - GEM=pages
-  - GEM=attachments
 before_install:
-  - unset BUNDLE_GEMFILE
-  - gem update --system
-  - gem --version
-  - gem install bundler
-  - cd $GEM
+  - rake
 rvm:
   - 2.0.0
   - 2.1.1
