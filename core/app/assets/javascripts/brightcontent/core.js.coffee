@@ -26,3 +26,6 @@ $ ->
       target: "_blank"
       rel: "nofollow"
       text: $(this).data("insertName")
+
+  $('[data-behaviour~=datepicker]').datetimepicker(pickTime: false, language: 'nl')
+  $('[data-behaviour~=datetimepicker]').datetimepicker(language: 'nl')
